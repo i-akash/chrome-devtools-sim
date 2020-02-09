@@ -4,43 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
+    <link rel="stylesheet" href="../style.css">
     <title>CSS Session</title>
     <style>   
         p {
         display: inline-block;
         border: 1px dashed red;
         padding: 1em;
-        }
-        .aloha {
-        padding: 1em;
+        text-transform: capitalize;
         }
         p:hover {
         background-color: cornflowerblue;
         }       
     </style>
 </head>
-<body>
-    <div>
-        <h4>View an element's CSS</h4>
-        <p class="aloha" data-message="peekaboo!">Inspect Me!</p>
+<body class="flex">
+    <div id="navbar">
     </div>
-    <div>
-        <h4>Add a CSS declaration to an element</h4>
-        <p id="target">Add A Background Color To Me!</p>
+
+
+    <div class="content">
+        <h3 class="title">HTML & CSS</h3>
+        <div class="point">
+            <h5>View an element's CSS</h5>
+            <p id="target" data-message="peekaboo!">Inspect Me!</p>
+        </div>
+        <div class="point">
+            <h5>Computed css of an element</h5>
+            <p id="target">Computed</p>
+        </div>
+        <div class="point">
+            <h5>Add a CSS declaration to an element</h5>
+            <p id="target">Add A Background Color To Me!</p>
+        </div>
+        <div class="point">
+            <h5>Add a CSS class to an element</h5>
+            <p id="target">Add A Class To Me!</p>
+        </div>
+        <div class="point">
+            <h5>Add a pseudostate to a class</h5>
+            <p id="target">Hover Over Me!</p>
+        </div>
+        <div class="point">
+            <h5>View used and unused CSS with the Coverage tab</h5>
+        </div>
     </div>
-    <div>
-        <h4>Add a CSS class to an element</h4>
-        <p id="target">Add A Class To Me!</p>
-    </div>
-    <div>
-        <h4>Add a pseudostate to a class</h4>
-        <p>Hover Over Me!</p>
-    </div>
-    <div>
-        View only the CSS that's actually applied to an element(Computed)
-    </div>
-    <div>
-        View used and unused CSS with the Coverage tab
-    </div>
+    <script src="../index.js"></script>
 </body>
 </html>

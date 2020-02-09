@@ -4,36 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
 </head>
 <body>
-    <a href="https://devtools.glitch.me/network/getstarted.html">net</a>
-    <div>
-       <h4>Simulate a slower network connection</h4>
+    <div id="navbar">
     </div>
-    <div>
-        <h4>Capture screenshots</h4>
+
+    <div class="content">
+            <h3 class="title">Network</h3>
+            <button id="netTest">Get Data</button>
+            <div class="point">
+            <h5>Simulate a slower network connection</h5>
+            </div>
+            <div class="point">
+                <h5>Capture screenshots</h5>
+            </div>
+            <div class="point">
+                <h5>Inspect a resource's details</h5>
+            </div>
+            <div class="point">
+                <h5>Search network headers and responses</h5>
+            </div>
+            <div class="point">
+                <h5>Filter resources</h5>
+            </div>
+            <div class="point">
+                <h5>Block requests</h5>
+            </div>
+            <div class="point">
+                <h5>Slow Time To First Byte</h5>
+            </div>
+            <div class="point">
+                <h5>Slow content download</h5>
+            </div>
+            <div class="point">
+                <h5>Manually clear browser cookies</h5>
+            </div>
     </div>
-    <div>
-        <h4>Inspect a resource's details</h4>
-    </div>
-    <div>
-        <h4>Search network headers and responses</h4>
-    </div>
-    <div>
-        <h4>Filter resources</h4>
-    </div>
-    <div>
-        <h4>Block requests</h4>
-    </div>
-    <div>
-        <h4>Slow Time To First Byte</h4>
-    </div>
-    <div>
-        <h4>Slow content download</h4>
-    </div>
-    <div>
-        <h4>Manually clear browser cookies</h4>
-    </div>
+    <script>
+        document.getElementById('netTest').onclick=()=>{
+            fetch('http://localhost:8080/net-test').then(response=>response.json())
+        }
+    </script>
+    <script src="../index.js"></script>
 </body>
 </html>
