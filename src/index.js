@@ -7,7 +7,7 @@ const PORT=8080
 
 const app=express()
 
-// app.use(compression({filter:()=>true}))
+app.use(compression({filter:()=>true}))
 app.use(express.static('public'))
 
 app.get('/net-test',(req,res,next)=>{
