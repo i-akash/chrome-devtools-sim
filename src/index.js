@@ -8,6 +8,10 @@ const PORT=8080
 const app=express()
 
 app.use(compression({filter:()=>true}))
+app.use((req,res,next)=>{
+    res.setHeader("Cache-Control","public, max-age=31536000");
+    res.setHeader("Set-Cookie","user=a3fWa;Max-Age=3600; HttpOnly")
+    next();})
 app.use(express.static('public'))
 
 app.get('/net-test',(req,res,next)=>{
@@ -29,5 +33,6 @@ app.get('/net-test',(req,res,next)=>{
             }      
         })
 })
+
 
 app.listen(PORT,()=>console.log(`Server listening on ${PORT}`))

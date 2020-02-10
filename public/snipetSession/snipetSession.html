@@ -35,16 +35,14 @@
         <h3 class="title">Snipets</h3>
         <div class="point">
             <h5>Embede html by Snipets..</h5>
-            <p id="target">Root</p>
-            <pre>
-
-let root=document.getElementById('target')
-let script=document.createElement('p')
-script.innerText="Target space changed by snipets"
-script.className="changed"
-root.replaceWith(script)
-            
-            </pre>
+            <p class="target">Root</p>
+            <pre><code> 
+let roots=[...document.getElementsByClassName('target')]
+roots.forEach(root=>{
+    root.innerText="Target space changed by snipets"
+    root.className="changed"
+})
+            </code></pre>
         </div>
     </div>
     <script src="../index.js"></script>

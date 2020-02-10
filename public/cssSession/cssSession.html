@@ -19,7 +19,17 @@
         }
         p:hover {
         background-color: cornflowerblue;
-        }       
+        }  
+
+        .changed{
+            display: inline-block;
+            border: 1px dashed blueviolet;
+            width: 100%;
+            padding: 1em;
+            margin-left: 10px;
+            background-color: rgb(57, 155, 247);
+            color: white;
+        }          
     </style>
 </head>
 <body>
@@ -31,23 +41,23 @@
         <h3 class="title">HTML & CSS</h3>
         <div class="point">
             <h5>View an element's CSS</h5>
-            <p id="target" data-message="peekaboo!">Inspect Me!</p>
+            <p class="target" data-message="peekaboo!">Inspect Me!</p>
         </div>
         <div class="point">
             <h5>Computed css of an element</h5>
-            <p id="target">Computed</p>
+            <p class="target">Computed</p>
         </div>
         <div class="point">
             <h5>Add a CSS declaration to an element</h5>
-            <p id="target">Add A Background Color To Me!</p>
+            <p class="target">Add A Background Color To Me!</p>
         </div>
         <div class="point">
             <h5>Add a CSS class to an element</h5>
-            <p id="target">Add A Class To Me!</p>
+            <p class="target">Add A Class To Me!</p>
         </div>
         <div class="point">
             <h5>Add a pseudostate to a class</h5>
-            <p id="target">Hover Over Me!</p>
+            <p class="target">Hover Over Me!</p>
         </div>
         <div class="point">
             <h5>View used and unused CSS with the Coverage tab</h5>

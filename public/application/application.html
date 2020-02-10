@@ -16,11 +16,22 @@
 
     <div class="content">
         <h4 class="title">Application</h4>
+        <div class="point">
+            <h5>Menifest</h5>
+            <li><a href="https://www.airbnb.com/">check airbnb menifest</a></li>
+        </div>
     </div>
+
     <script src="../index.js"></script>
     <script>
         localStorage.setItem("ls","something")
         sessionStorage.setItem("ss","something")
+        
+        caches.open('v1').then(function(cache) {
+        return cache.addAll([
+            '../images/large_image/3-1080w.jpg'
+        ]);
+    });
     </script>
 </body>
 </html>
