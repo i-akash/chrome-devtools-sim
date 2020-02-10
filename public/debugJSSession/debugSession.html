@@ -4,18 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <h4>Debugging</h4>
-        <a href="https://googlechrome.github.io/devtools-samples/debug-js/get-started">link</a>
-        <div>
-            <h4>Event Listener</h4>
-            <h4>Line of Code</h4>
-            <h4>Conditional line-of-code breakpoints</h4>
-            <h4>Pause on Exception</h4>
+    <div id="navbar">
+    </div>
+    
+    <div class="content">
+        <h3 class="title">Debugging</h3>
+
+        <form id='myform'>
+            <fieldset>
+                <label for="num1">Number 1</label>
+                <input type="text" placeholder="Number 1" id="num1">
+                <label for="num2">Number 2</label>
+                <input type="text" placeholder="Number 2" id="num2">
+                <button  id="debug-btn">Add Number 1 and Number 2</button>
+                <p></p>
+            </fieldset>
+          </form>
+        
+          <div class="point">
+            <ul>
+                <li>Event Listener</li>
+                <li>Line of Code</li>
+                <li>Conditional line-of-code breakpoints</li>
+                <li>Pause on Exception</li>
+            </ul>
         </div>
     </div>
+    <script src="debug.js"></script>
+    <script src="../index.js"></script>
 </body>
 </html>
