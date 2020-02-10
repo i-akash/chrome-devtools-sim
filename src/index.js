@@ -1,6 +1,6 @@
 const express=require('express')
 const compression=require('compression')
-
+const minifier=require('express-minify')
 
 // constant 
 const PORT=8080
@@ -8,10 +8,14 @@ const PORT=8080
 const app=express()
 
 app.use(compression({filter:()=>true}))
+app.use(minifier())
+
+
 app.use((req,res,next)=>{
-    res.setHeader("Cache-Control","public, max-age=31536000");
+    // res.setHeader("Cache-Control","public, max-age=31536000");
     res.setHeader("Set-Cookie","user=a3fWa;Max-Age=3600; HttpOnly")
     next();})
+
 app.use(express.static('public'))
 
 app.get('/net-test',(req,res,next)=>{

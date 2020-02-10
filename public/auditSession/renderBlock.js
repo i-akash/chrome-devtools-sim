@@ -1,7 +1,8 @@
-function sleep(ms) {
+
+function renderBlock(ms) {
     var start = new Date().getTime(), expire = start + ms;
     while (new Date().getTime() < expire) { }
     return;
 }
 
-sleep(2000)
+renderBlock(2000)

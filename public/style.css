@@ -7,6 +7,7 @@ html, body {
 	display: flex;
 	flex-direction: column;
 	position: fixed;
+
 }
 
 .navbar > a {
@@ -25,9 +26,23 @@ html, body {
 }
 
 
+.flex {
+	display: flex;
+}
+
+
+.flex {
+	display: flex;
+}
+
+.flex {
+	display: flex;
+}
+
+
 .content {
 	margin: 1rem;
-	margin-left:11rem;
+	margin-left:12rem;
 	margin-bottom: 4rem;
 }
 
@@ -42,3 +57,14 @@ html, body {
 	text-transform: capitalize;
 }
 
+
+
+pre{
+	text-transform: none;
+	letter-spacing: normal;
+}
+
+
+li{
+	margin-left: 15px;
+}
